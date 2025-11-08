@@ -86,7 +86,7 @@ html {
     margin: 0px;
 }
 body {
-    background-image: url("../resources/Images/Screenshot\ 2025-11-06\ 225433.png");
+    background-image: url("../resources/Images/Background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -102,9 +102,9 @@ body {
 header {
     width: 100%;
     height: 55px;
-    padding: 0px 50px;
+    padding: 15px 50px;
+    top: 0px;
     position: fixed;
-    top: 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -116,10 +116,14 @@ header .logo {
     background-color: var(--background);
     height: 55px;
     border: 2px solid var(--border);
-    color: #fff;
+    color: var(--maintheme);
     font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
     padding: 15px;
     border-radius: 999px;
+    transition-duration: 0.5s;
+    backdrop-filter: blur(2px);
 }
 
 nav {
@@ -132,6 +136,7 @@ nav {
     border: 2px solid var(--border);
     border-radius: 9999px;
     padding: 5px;
+    backdrop-filter: blur(2px);
 }
 nav #wiki {
     height: 45px;
@@ -145,6 +150,7 @@ nav a {
     color: #fff;
     font-family: "Roboto";
     font-size: 20px;
+    transition-duration: 0.5s;
 }
 
 #Title-container {
@@ -174,4 +180,57 @@ nav a {
     font-family: "Roboto";
     text-align: center;
     font-size: 24px;
+}
+
+header nav a:hover {
+    color: var(--maintheme);
+    text-shadow: 0 0 3px var(--maintheme);
+    transform: scale(1.05);
+}
+
+header div:hover {
+    transform: scale(1.05);
+}
+
+.but {
+    color: var(--maintheme);
+    text-shadow: 0 0 3px var(--maintheme);
+    transform: scale(1.05);
+}
+
+/* ================================================================================================ */
+
+.Distos-Main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 25px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.card {
+    color: var(--paragraph);
+    font-family: "Roboto";
+    font-size: 20px;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+.card img {
+    width: 100px;
+    flex-basis: 100px;
+}
+
+.card:hover {
+    box-shadow: var(--maintheme) 0px 5px 15px;
+    transform: scale(1.05);
 }
